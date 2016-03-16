@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HearMeNow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hear me now..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7L-sH-1CJ">
+                                <rect key="frame" x="20" y="20" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="GYZ-JY-wa8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AfM-pU-ujf">
+                                <rect key="frame" x="20" y="139" width="560" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wSL-NO-JsA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjz-6c-JQO">
+                                <rect key="frame" x="20" y="77" width="560" height="30"/>
+                                <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="recordPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fro-eE-OaF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xjz-6c-JQO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="JQb-fQ-8dm"/>
+                            <constraint firstItem="AfM-pU-ujf" firstAttribute="leading" secondItem="xjz-6c-JQO" secondAttribute="leading" id="Xwy-00-mfp"/>
+                            <constraint firstItem="J7L-sH-1CJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Z5h-dg-rzy"/>
+                            <constraint firstItem="xjz-6c-JQO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="lDc-Vd-TYY"/>
+                            <constraint firstItem="xjz-6c-JQO" firstAttribute="leading" secondItem="J7L-sH-1CJ" secondAttribute="leading" id="p4r-Qa-5yn"/>
+                            <constraint firstItem="xjz-6c-JQO" firstAttribute="top" secondItem="J7L-sH-1CJ" secondAttribute="bottom" constant="36" id="qXh-K1-dS8"/>
+                            <constraint firstItem="AfM-pU-ujf" firstAttribute="trailing" secondItem="xjz-6c-JQO" secondAttribute="trailing" id="sLO-X7-BFa"/>
+                            <constraint firstItem="AfM-pU-ujf" firstAttribute="top" secondItem="xjz-6c-JQO" secondAttribute="bottom" constant="32" id="uKu-z1-qAa"/>
+                            <constraint firstItem="J7L-sH-1CJ" firstAttribute="trailing" secondItem="xjz-6c-JQO" secondAttribute="trailing" id="y0E-4j-mdM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playButton" destination="AfM-pU-ujf" id="RHC-EB-BDX"/>
+                        <outlet property="recordButton" destination="xjz-6c-JQO" id="zyq-LD-fhU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="305"/>
+        </scene>
+    </scenes>
+</document>
